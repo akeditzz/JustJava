@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsize_hero">36sp</dimen>
+    <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_32dp">32dp</dimen>
+    <dimen name="margin_72dp">72dp</dimen>
+    <dimen name="corner_radius_edittext_bg">12dp</dimen>
+    <dimen name="editext_height">45dp</dimen>
+    <dimen name="editext_bg_padding">16dp</dimen>
+    <dimen name="textsize_16sp">16sp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
+    <dimen name="dimen_24dp">24dp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_16dp">16dp</dimen>
+    <dimen name="corner_radius_orderbtn">40dp</dimen>
+
+</resources>

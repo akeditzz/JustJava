@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">JustJava</string>
+    <string name="label_coffee">Coffee</string>
+    <string name="label_house">House</string>
+    <string name="your_name_hint">Your Name</string>
+    <string name="quantity_label">Quantity</string>
+    <string name="text_minus">-</string>
+    <string name="text_plus">+</string>
+    <string name="text_0">0</string>
+    <string name="text_price">Price : </string>
+    <string name="rupee">₹ </string>
+    <string name="rupee_0">₹ 0</string>
+    <string name="text_order">Order</string>
+    <string name="bottom_tagline">We serve the best in town</string>
+    <string name="thankyou_toast">Thank you %s Your order has been placed</string>
+    <string name="error_toast">Please enter your name</string>
+</resources>
