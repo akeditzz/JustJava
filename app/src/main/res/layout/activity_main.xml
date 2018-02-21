@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.akshaymanagooli.justjava.MainActivity">
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,6 +15,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/AlphaBlack" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
 
     <LinearLayout
         android:id="@+id/linearlayout_hero"
@@ -59,12 +74,53 @@
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white" />
 
+    <LinearLayout
+        android:id="@+id/ll_toppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toppings_label"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            />
+
+        <CheckBox
+            android:id="@+id/cb_whippedcream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_16sp"
+            android:text="@string/whipped_cream_label"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/dimen_24dp"
+            android:buttonTint="@android:color/white" />
+        <CheckBox
+            android:id="@+id/cb_chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_24dp"
+            android:textSize="@dimen/textsize_16sp"
+            android:text="@string/chocolate_label"
+            android:textColor="@android:color/white"
+            android:paddingStart="@dimen/dimen_24dp"
+            android:buttonTint="@android:color/white" />
+
+    </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/rl_quantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/et_name"
-        android:layout_marginTop="@dimen/margin_32dp"
+        android:layout_below="@+id/ll_toppings"
+        android:layout_marginTop="@dimen/dimen_16dp"
         android:gravity="center_horizontal">
 
         <TextView
@@ -76,6 +132,7 @@
             android:text="@string/quantity_label"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize_16sp" />
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -131,7 +188,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/margin_32dp"
         android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -139,6 +196,7 @@
             android:layout_marginEnd="@dimen/dimen_16dp"
             android:layout_marginStart="@dimen/dimen_16dp"
             android:text="@string/text_price"
+            android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize_16sp" />
 
@@ -148,7 +206,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimen_16dp"
             android:layout_marginStart="@dimen/dimen_16dp"
-            android:text="@string/rupee_0"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textsize_16sp" />
 
@@ -167,15 +226,6 @@
         android:onClick="Onclick"
         android:text="@string/text_order" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/margin_32dp"
-        android:fontFamily="sans-serif-light"
-        android:onClick="Onclick"
-        android:text="@string/bottom_tagline"
-        android:textColor="@android:color/white" />
-
+    </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
