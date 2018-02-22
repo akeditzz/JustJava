@@ -14,7 +14,7 @@
     <string name="bottom_tagline">We serve the best in town</string>
     <string name="thankyou_toast">Thank you %s Your order has been placed</string>
     <string name="error_toast">Please enter your name</string>
-    <string name="price">Name: %s \n %s \n %s \n Quantity: %d \n Total Price: ₹ %d \n Thank You!</string>
+    <string name="price"> Name: %s \n %s \n %s \n Quantity: %d \n Total Price: ₹ %d \n Thank You!</string>
     <string name="whipped_cream_label">Whipped Cream</string>
     <string name="chocolate_label">Chocolate</string>
     <string name="toppings_label">Toppings</string>

@@ -15,7 +15,7 @@
     <string name="bottom_tagline">ನಾವು ಪಟ್ಟಣದಲ್ಲಿ ಉತ್ತಮ ಸೇವೆಯನ್ನು ನೀಡುತ್ತೇವೆ</string>
     <string name="thankyou_toast">ಧನ್ಯವಾದ %s ನಿಮ್ಮ ಆದೇಶವನ್ನು ಇರಿಸಲಾಗಿದೆ</string>
     <string name="error_toast">ದಯವಿಟ್ಟು ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ</string>
-    <string name="price">ಹೆಸರು: %s \n %s \n %s \n ಪ್ರಮಾಣ: %d \n ಒಟ್ಟು ಬೆಲೆ: ₹ %d \n ಧನ್ಯವಾದ!</string>
+    <string name="price"> ಹೆಸರು: %s \n %s \n %s \n ಪ್ರಮಾಣ: %d \n ಒಟ್ಟು ಬೆಲೆ: ₹ %d \n ಧನ್ಯವಾದ!</string>
     <string name="whipped_cream_label">ಹಾಲಿನ ಕೆನೆ</string>
     <string name="chocolate_label">ಚಾಕೊಲೇಟ್</string>
     <string name="toppings_label">ಮೇಲೋಗರಗಳು</string>
