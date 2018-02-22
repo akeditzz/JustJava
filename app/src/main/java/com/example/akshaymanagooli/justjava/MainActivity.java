@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     /**
      * Variable/widgets Declarations
      */
-    TextView tvPrice, tvQuantity;
+    TextView tvQuantity;
     EditText etName;
     CheckBox cb_whipped_cream, cb_chocolate;
 
@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
      * and we have set the checked listener to those two check box
      */
     private void initView() {
-        tvPrice = findViewById(R.id.tv_price);
         tvQuantity = findViewById(R.id.tv_quantity_value);
         etName = findViewById(R.id.et_name);
         cb_whipped_cream = findViewById(R.id.cb_whippedcream);

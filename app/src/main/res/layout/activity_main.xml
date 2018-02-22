@@ -180,44 +180,13 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rl_quantity"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/margin_32dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimen_16dp"
-            android:layout_marginStart="@dimen/dimen_16dp"
-            android:text="@string/text_price"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/textsize_16sp" />
-
-        <TextView
-            android:id="@+id/tv_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimen_16dp"
-            android:layout_marginStart="@dimen/dimen_16dp"
-            android:layout_marginTop="@dimen/dimen_8dp"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/textsize_16sp" />
-
-    </LinearLayout>
 
     <Button
         android:id="@+id/bt_order"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ll_price"
+        android:layout_below="@+id/rl_quantity"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/margin_32dp"
         android:background="@drawable/orderbtn_bg"
