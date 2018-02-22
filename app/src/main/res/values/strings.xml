@@ -18,4 +18,11 @@
     <string name="whipped_cream_label">Whipped Cream</string>
     <string name="chocolate_label">Chocolate</string>
     <string name="toppings_label">Toppings</string>
+    <string name="add_whipped_cream">Add whipped cream ?</string>
+    <string name="add_chocolate_label">Add chocolate ?</string>
+    <string name="toastlabel_entername">Please enter name</string>
+    <string name="labelOrdersummary">Order Summary</string>
+    <string name="label_confirm">Confirm</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="emailsubject_label">JustJava order for %s</string>
 </resources>

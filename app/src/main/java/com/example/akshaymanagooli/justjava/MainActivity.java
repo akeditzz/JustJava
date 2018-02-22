@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
+    /**
+     * Variable/widgets Declarations
+     */
     TextView tvPrice, tvQuantity;
     EditText etName;
     CheckBox cb_whipped_cream, cb_chocolate;
@@ -34,10 +37,15 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
     }
 
+    /**
+     * This method is invoked when the layout is created,
+     * here we have initialized our widgets to their respective id
+     * and we have set the checked listener to those two check box
+     */
     private void initView() {
-        tvPrice = (TextView) findViewById(R.id.tv_price);
-        tvQuantity = (TextView) findViewById(R.id.tv_quantity_value);
-        etName = (EditText) findViewById(R.id.et_name);
+        tvPrice = findViewById(R.id.tv_price);
+        tvQuantity = findViewById(R.id.tv_quantity_value);
+        etName = findViewById(R.id.et_name);
         cb_whipped_cream = findViewById(R.id.cb_whippedcream);
         cb_chocolate = findViewById(R.id.cb_chocolate);
 
@@ -46,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     }
 
 
+    /**
+     * method is called when we click the buttons like (+),(-), Reset button
+     * @param v is attached with the button properties which we press
+     */
     public void Onclick(View v) {
 
         switch (v.getId()) {
@@ -70,46 +82,66 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
     }
 
+    /**
+     * Method used for quantity increment
+     */
     private void increment() {
         quantity++;
         tvQuantity.setText(String.valueOf(quantity));
     }
 
+    /**
+     * Method used for quantity decrement
+     */
     private void decrement() {
         quantity--;
         tvQuantity.setText(String.valueOf(quantity));
     }
 
+
+    /**
+     * This method calculates the price of order.
+     * @param qty is the value of number of quantity
+     * @return integer value which is the calculated price.
+     */
     private int calculatePrice(int qty) {
         return qty * itemPrice;
     }
 
+    /**
+     * Method is used to place order
+     */
     private void placeorder() {
         if (etName.getText().length() > 0) {
-            String whippedCream = "Add whipped cream ? " + hasWhippedCream;
-            String chocolate = "Add chocolate ? " + hasChocolate;
+            String whippedCream = getString(R.string.add_whipped_cream) + hasWhippedCream;
+            String chocolate = getString(R.string.add_chocolate_label) + hasChocolate;
             ConfirmDialog(String.format(getString(R.string.price), etName.getText().toString(), whippedCream, chocolate, quantity, calculatePrice(quantity)));
 
         } else {
-            Toast.makeText(this, "Please enter name", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastlabel_entername, Toast.LENGTH_SHORT).show();
 
         }
 
     }
 
+    /**
+     * Method is used to confirm whether the order is correct.
+     * An AlertDialog will be invoked.
+     * @param s is the message that contains order summary
+     */
     private void ConfirmDialog(final String s) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
-        alertDialogBuilder.setTitle("Order Summary");
+        alertDialogBuilder.setTitle(R.string.labelOrdersummary);
         alertDialogBuilder.setMessage(s);
         alertDialogBuilder.setCancelable(false);
-        alertDialogBuilder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setPositiveButton(R.string.label_confirm, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
                 emailIntent(s);
                 dialog.dismiss();
             }
         });
-        alertDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNegativeButton(R.string.label_cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
@@ -122,9 +154,13 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     }
 
 
-
+    /**
+     * Method is used to send email.
+     * Invokes email app through Intent
+     * @param s is the message that contains order summary
+     */
     private void emailIntent(String s) {
-        String subject = String.format("JustJava order for %s",etName.getText().toString());
+        String subject = String.format(getString(R.string.emailsubject_label),etName.getText().toString());
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
@@ -135,6 +171,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
     }
 
+    /**
+     * Saves the instance of app, for example when app enters into landscape mode or back to potrait mode
+     * @param outState holds the properties of current state
+     */
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -143,6 +183,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
     }
 
+    /**
+     * Restores the instance of app, for example when app enters into landscape mode or back to potrait mode
+     * @param savedInstanceState holds the properties of saved instance state
+     */
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -151,6 +195,11 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         calculatePrice(quantity);
     }
 
+    /**
+     * This method is invoked when user checks any of toppings
+     * @param compoundButton is attached with the checkbox properties which user checks
+     * @param b boolean to identify if the checkbox is checked, true if checked, false if unchecked
+     */
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
@@ -178,6 +227,11 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
     }
 
+    /**
+     * This method is used to add topping prices to main price
+     * @param b to identify if topping is checked or unchecked
+     * @param i topping price to be added
+     */
     private void ToppingPrice(boolean b, int i) {
 
         if (b) {
